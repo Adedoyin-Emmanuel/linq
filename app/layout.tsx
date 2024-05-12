@@ -6,7 +6,8 @@ const grotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Linq",
-  description: "",
+  description:
+    "Linq is a powerful tool that simplifies social sharing by allowing users to quickly generate shareable links for their content.",
 };
 
 export default function RootLayout({
