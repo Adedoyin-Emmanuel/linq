@@ -4,57 +4,11 @@ import Header from "@/app/components/header";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import LinqDrawer from "@/app/components/drawer";
-import Link from "next/link";
-import Image from "next/image";
 
 import { useState } from "react";
+import Details from "./components/details";
 
 export default function Home() {
-  const ShareItemsDetails = () => {
-    return (
-      <div className="p-4 pb-0">
-        <section className="my-4 w-full flex items-center justify-between">
-          <Link href="/">
-            <Image
-              src={"/facebook.png"}
-              alt="Facebook logo"
-              width={40}
-              height={40}
-            />
-          </Link>
-          <Link href="/">
-            <Image src={"/x.png"} alt="Twitter logo" width={35} height={35} />
-          </Link>
-          <Link href="/">
-            <Image
-              src={"/instagram.png"}
-              alt="Instagram logo"
-              width={45}
-              height={45}
-            />
-          </Link>
-
-          <Link href="/">
-            <Image
-              src={"/telegram.png"}
-              alt="Telegram logo"
-              width={50}
-              height={50}
-            />
-          </Link>
-
-          <Link href="/">
-            <Image
-              src={"/whatsapp.png"}
-              alt="Twitter logo"
-              width={50}
-              height={50}
-            />
-          </Link>
-        </section>
-      </div>
-    );
-  };
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   const handleButtonClick = () => {
@@ -82,7 +36,7 @@ export default function Home() {
           isOpen={openDrawer}
           setIsOpen={setOpenDrawer}
         >
-          <ShareItemsDetails />
+          <Details />
         </LinqDrawer>
       </section>
     </section>

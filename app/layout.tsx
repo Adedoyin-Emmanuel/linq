@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const grotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={grotesk.className}>{children}</body>
+      <body className={grotesk.className}>
+        {children}
+
+        <Toaster />
+      </body>
     </html>
   );
 }
