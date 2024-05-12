@@ -1,19 +1,12 @@
-
-"use client"
+"use client";
 import React from "react";
 
 interface DrawerProps {
-    
+  className?: string;
 }
 
-const Drawer = ()=> {
-
-    return (
-        <div>
-            <h1>Drawer works!</h1>
-        </div>
-    );  
-}
+const Drawer = ({ className }: DrawerProps) => {
+  return <div className={`${className}`}></div>;
+};
 
 export default Drawer;
-    
