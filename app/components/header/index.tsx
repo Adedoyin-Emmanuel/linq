@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ className }: HeaderProps) => {
   return (
-    <div className={`${className} w-full max-w-[600px] z-[10000] py-3`}>
+    <div className={`${className} w-full max-w-[600px] py-3`}>
       <div className="mx-auto flex items-center justify-between p-3">
         <h1 className="font-extrabold text-2xl">Linq</h1>
 

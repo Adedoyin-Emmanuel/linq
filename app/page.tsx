@@ -10,6 +10,14 @@ import Details from "./components/details";
 
 export default function Home() {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    text: "",
+  });
+
+  const handleInputChange = (e: React.FormEvent<HTMLFormElement> | any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleButtonClick = () => {
     setOpenDrawer(!openDrawer);
@@ -23,6 +31,9 @@ export default function Home() {
           placeholder="Text content here"
           className="w-full outline-none border"
           rows={5}
+          name="text"
+          value={formData.text}
+          onChange={handleInputChange}
         ></Textarea>
 
         <br />
@@ -36,7 +47,7 @@ export default function Home() {
           isOpen={openDrawer}
           setIsOpen={setOpenDrawer}
         >
-          <Details />
+          <Details text={formData.text} />
         </LinqDrawer>
       </section>
     </section>
