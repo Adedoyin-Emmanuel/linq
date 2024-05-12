@@ -9,17 +9,19 @@ interface HeaderProps {
 const Header = ({ className }: HeaderProps) => {
   return (
     <div
-      className={`${className} w-full flex items-center md:justify-around justify-between my-4 p-3`}
+      className={`${className} w-full max-w-[600px] z-[10000] py-3`}
     >
-      <h1 className="font-extrabold text-[22px]">Linq</h1>
-      <section className="flex gap-x-5">
-        <Link href={"https://github.com/adedoyin-emmanuel/linq"}>
-          <Github className="w-5 h-5 cursor-pointer" />
-        </Link>
-        <Link href={"https://x.com/Emmysoft_Tm"}>
-          <Twitter className="w-5 h-5 cursor-pointer" />
-        </Link>
-      </section>
+      <div className="mx-auto flex items-center justify-between p-3">
+        <h1 className="font-extrabold text-2xl">Linq</h1>
+        <div className="flex gap-x-5">
+          <Link href={"https://github.com/adedoyin-emmanuel/linq"}>
+            <Github className="w-5 h-5 cursor-pointer" />
+          </Link>
+          <Link href={"https://x.com/Emmysoft_Tm"}>
+            <Twitter className="w-5 h-5 cursor-pointer" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
