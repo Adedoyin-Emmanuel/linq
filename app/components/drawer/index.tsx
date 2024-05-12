@@ -28,7 +28,7 @@ interface DrawerProps {
   customFooterChildren?: React.ReactNode;
 }
 
-const ClipsaveDrawer = ({
+const LinqDrawer = ({
   className,
   title,
   description,
@@ -74,4 +74,4 @@ const ClipsaveDrawer = ({
   );
 };
 
-export default ClipsaveDrawer;
+export default LinqDrawer;
