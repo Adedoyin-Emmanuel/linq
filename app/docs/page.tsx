@@ -43,7 +43,9 @@ export default function Docs() {
         </p>
 
         <br />
-        <Button className="w-full p-6 my-3">Connect with me</Button>
+        <Link href={"https://x.com/Emmysoft_Tm"} className="w-full">
+          <Button className="w-full p-6 my-3">Connect with me</Button>
+        </Link>
       </section>
     </section>
   );
